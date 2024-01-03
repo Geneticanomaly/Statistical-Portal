@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <script src="https://unpkg.com/frappe-charts@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.0/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Data charts</title>
+</head>
+<body>
+    <nav>
+        <h2>Finnish Municipality Data Explorer</h2>
+        <img src="./images/Earth.png"/>
+    </nav>
+
+    <div id="myContainer" class="container">
+    </div>
+
+
+    <div class="container">
+        <button id="search" class="search-btn">Search</button>
+        <div id="error-container" class="error-msg"></div>
+    </div>
+
+    <br />
+
+    <div id="drag-container" class="drag-container">
+        <div class="drag-element" draggable="true">Employment data</div>
+        <div class="drag-element" draggable="true">Population data</div>
+        <div class="drag-element" draggable="true">Migration data</div>
+    </div>
+    
+    <div id="chart"></div>
+    <div class="chart-btn-container">
+        <button class="chart-btn" id="svg-link">Export as SVG</button>
+        <button class="chart-btn" id="png-link">Export as PNG</button>
+    </div>
+    <div class="grid-container">
+        <br />
+        <button class="back-btn" onclick="window.location.href = 'index.html';">Go Back</button>
+    </div>
+
+    <script src="js/chart.js"></script>
+
+    <!-- This script is executed in order to access its functions in chart.js -->
+    <script src="./js/jsonQueries.js"></script> 
+</body>
+</html>

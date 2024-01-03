@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Karla:wght@700&family=Poppins:wght@300;400&family=Roboto&display=swap');
+
+
+:root {
+    --gradient: linear-gradient(
+        45deg,
+        #845ec2,
+        #d65db1,
+        #ff6f91,
+        #ff9671,
+        #ffc75f,
+        #f9f871
+    )
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(240, 240, 240);
+}
+
+nav {
+    z-index: 9000;
+    height: 7vh;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #008CBA;
+    /* background-image: var(--gradient); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+nav > h2 {
+    padding-left: 10px;
+}
+
+nav > img {
+    height: 45px;
+    padding-right: 10px;
+}
+
+/* index.html  component stylings*/
+
+#map {
+    width: 100%;
+    height: 87vh;
+    left: 0;
+}
+
+.btn-container {
+    z-index: 1000;
+    margin-top: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 10px;
+}
+
+
+.year-btn {
+    /* margin-top: 8vh; */
+    padding: 5px 10px;
+    background-color: #008CBA;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: white;
+    transition: .5s ease;
+}
+
+.parliament-year-btn {
+    padding: 5px 10px;
+    background-color: #008CBA;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: white;
+    transition: .5s ease;
+}
+
+.map-error-container {
+    display: flex;
+    justify-content: center;
+}
+
+.map-error-msg {
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: crimson;
+}
+
+/* chart.html  component stylings*/
+
+.tag {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.search-btn {
+    padding: 8px 13px;
+    font-size: 14px;
+    background-color: #008CBA;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: .5s ease;
+    margin-top: 20px;
+}
+
+.back-btn {
+    width: 100px;
+    font-size: 16px;
+    padding: 8px 13px;
+    background-color: #008CBA;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: .5s ease;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.error-msg {
+    margin-top: 20px;
+    font-weight: bold;
+    color: crimson;
+}
+
+
+.slider-container{
+    display: flex;
+    margin-top: 10vh;
+    width: 40%;
+    position: relative;
+}
+
+.slider {
+    width: 100%;
+    cursor: pointer;
+}
+
+.tooltip {
+    background: rgb(94, 94, 94);
+    color: white;
+    padding: 2px 10px;
+    position: absolute;
+    border-radius: 4px;
+    /* left: 50%; */
+    bottom: 100%;
+    transform: translateX(-50%);
+    /* background-image: var(--gradient); */
+}
+
+.slider-container_1{
+    display: flex;
+    margin-top: 10vh;
+    width: 40%;
+    position: relative;
+}
+
+.slider_1 {
+    width: 100%;
+    cursor: pointer;
+}
+
+.tooltip_1 {
+    background: rgb(94, 94, 94);
+    color: white;
+    padding: 2px 10px;
+    position: absolute;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 0 rgba(0,0,0, 1);
+    /* left: 50%; */
+    bottom: 100%;
+    transform: translateX(-50%);
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.drag-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.drag-element {
+    cursor: pointer;
+    background-color: rgb(207, 207, 207);
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    touch-action: auto;
+}
+
+.drag-element:active {
+    background-image: var(--gradient);
+}
+
+.disabled {
+    background-color: rgb(150, 150, 150);
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.disabled:active {
+    background-image: none;
+}
+
+.chart-btn-container {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-left: 45px;
+}
+
+.chart-btn {
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 15px;
+}
+
+
+
+/* Media queries */
+
+@media (hover: hover) {
+    button:hover { /* Universal for all buttons */
+        background-color: rgb(240, 240, 240);
+        color: black;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        transition: .5s ease;
+        cursor: pointer;
+    }
+    .drag-element:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        transition: 1s ease;
+    }
+    .disabled:hover {
+        box-shadow: none;
+    }
+    .chart-btn:nth-child(1):hover {
+        color: white;
+        background-color: gray;
+        border: none;
+        border-radius: 5px 0px 0px 5px;
+        transition: 1s ease;
+    }
+    
+    .chart-btn:nth-child(2):hover {
+        color: white;
+        background-color: gray;
+        border: none;
+        border-radius: 0px 5px 5px 0px;
+        transition: 1s ease;
+    }
+}
+
+@media (max-width: 750px)  {
+    .btn-container {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-gap: 5px;
+    }
+    #map {
+        height: 83.5vh;
+    }
+}
+
+@media (max-width: 480px)  {
+    nav {
+        height: 6vh;
+    }
+    nav > h2 {
+        font-size: 18px;
+    }
+    nav > img {
+        height: 40px;
+    }
+    .tooltip {
+        padding: 1px 7px;
+        font-size: 14px;
+    }
+    .tooltip_1 {
+        padding: 1px 7px;
+        font-size: 14px;
+    }
+    .error-msg {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 450px)  {
+    .drag-element {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+}
+
+@media (max-width: 450px)  {
+    nav > h2 {
+        font-size: 13px;
+    }
+}
+
+@media (max-height: 800px)  {
+    nav {
+        height: 5vh;
+    }
+    nav > h2 {
+        font-size: 16px;
+    }
+    nav > img {
+        height: 30px;
+    }
+    .btn-container {
+        margin-top: 6vh;
+    }
+    .search-btn {
+        padding: 3px 5px;
+        font-size: 12px;
+    }
+    .tooltip {
+        padding: 1px 4px;
+        font-size: 10px;
+    }
+    .tooltip_1 {
+        padding: 1px 4px;
+        font-size: 10px;
+    }
+    .slider-container{
+        margin-top: 8vh;
+    }
+    .slider-container_1{
+        margin-top: 8vh;
+    }
+    .search-btn {
+        margin-top: 10px;
+    }
+    .back-btn {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    .error-msg {
+        margin-top: auto;
+    }
+}
